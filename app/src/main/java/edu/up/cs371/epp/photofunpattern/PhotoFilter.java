@@ -50,61 +50,24 @@ public abstract class PhotoFilter {
     public Bitmap apply(Bitmap inBmp) {
         int width = inBmp.getWidth();
         int height = inBmp.getHeight();
-        int p0 =0 , p1 = 0 , p2 = 0 , p3 =0 , p5 = 0 , p6 = 0, p7 = 0, p8 = 0 ;
+        int p0 =0 , p1 = 0 , p2 = 0 , p3 =0 , p5 = 0 , p6 = 0, p7 = 0, p8 = 0, inPixel = 0;
 
         Bitmap newBmp = Bitmap.createBitmap(width, height, inBmp.getConfig());
 
-        for (int w = 0; w < width; w++) {
-            for (int h = 0; h < height; h++) {
-                int inPixel = inBmp.getPixel(w,h);
-//                if(w == 0 && h ==0) {
-//                    p0 = 0;
-//                }
-//                else{
-//                     p0 = inBmp.getPixel(w - 1, h - 1);
-//                }
-//                if(h == 0) {
-//                    p1 = 0;
-//                }
-//                else{
-//                     p1 = inBmp.getPixel(w, h - 1);
-//                }
-//                if(h == 0 && w == width-1){
-//                    p2 = 0;
-//                }
-//                else{
-//                     p2 = inBmp.getPixel(w+1, h-1);
-//                }
-//                if(w==0){
-//                     p3 = 0;
-//                }
-//                else {
-//                     p3 = inBmp.getPixel(w - 1, h);
-//                }
-//                if(w == width-1){
-//                     p5 = 0;
-//                }
-//                else{
-//                     p5 = inBmp.getPixel(w+1,h);
-//                }
-//                if(w==0 && h == height -1){
-//                     p6 = 0;
-//                }
-//                else {
-//                    p6 = inBmp.getPixel(w - 1, h + 1);
-//                }
-//                if(h ==height-1){
-//                     p7=0;
-//                }
-//                else {
-//                     p7 = inBmp.getPixel(w, h + 1);
-//                }
-//                if(w == width -1 && h == height -1){
-//                     p8 = 0;
-//                }
-//                else {
-//                    p8 = inBmp.getPixel(w + 1, h + 1);
-//                }
+        for (int w = 1; w < width-1; w++) {
+            for (int h = 1; h < height-1; h++) {
+
+
+                    p0 = inBmp.getPixel(w - 1, h - 1);
+                    p1 = inBmp.getPixel(w, h - 1);
+                    p2 = inBmp.getPixel(w + 1, h - 1);
+                    p3 = inBmp.getPixel(w - 1, h );
+                    inPixel = inBmp.getPixel(w , h );
+                    p5 = inBmp.getPixel(w + 1, h);
+                    p6 = inBmp.getPixel(w - 1, h + 1);
+                    p7 = inBmp.getPixel(w , h + 1);
+                    p8 = inBmp.getPixel(w + 1, h + 1);
+
                 int outPixel = transformPixel(inPixel, p0,p1, p2, p3, p5,p6, p7, p8);
                 newBmp.setPixel(w, h, outPixel);
             }

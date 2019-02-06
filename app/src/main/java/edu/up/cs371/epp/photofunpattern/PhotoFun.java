@@ -79,6 +79,7 @@ public class PhotoFun extends AppCompatActivity {
             BitmapDrawable originalDrawableBmp =
                     (BitmapDrawable) myOriginalView.getDrawable();
             myOriginalBmp = originalDrawableBmp.getBitmap();
+
         }
 
         public void onNothingSelected(AdapterView<?> parentView){
@@ -113,6 +114,8 @@ public class PhotoFun extends AppCompatActivity {
                 (Button) findViewById(R.id.brightnessFilterButton);
         brightnessFilterButton.setOnClickListener
                 (new brightnessFilterButtonListener());
+        initSpinner();
+        initImageArray();
     }
 
     /*

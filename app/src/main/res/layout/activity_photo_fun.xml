@@ -9,17 +9,18 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="90">
+        android:layout_weight="90"
+        android:orientation="horizontal">
 
         <Spinner
             android:id="@+id/imageNames"
-            android:layout_width="10dp"
-            android:layout_height="match_parent"
-            android:layout_weight="6.2"
-            android:background="#00ffff" />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:background="#00ffff"
+            android:entries="@array/imageNames"/>
 
         <ImageView
             android:id="@+id/originalImage"
@@ -27,8 +28,8 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            app:srcCompat="@drawable/olivia_small"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            app:srcCompat="@drawable/olivia_small" />
 
         <ImageView
             android:id="@+id/newImage"
@@ -36,8 +37,8 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            app:srcCompat="@drawable/blank"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            app:srcCompat="@drawable/blank" />
     </LinearLayout>
 
     <LinearLayout

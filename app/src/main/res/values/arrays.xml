@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="imageNames">
+        <item>@drawable/blank</item>
+        <item>@drawable/cheese</item>
+        <item>@drawable/edcepp</item>
+        <item>@drawable/olivia10noise</item>
+        <item>@drawable/olivia25noise</item>
+        <item>@drawable/olivia50noise</item>
+        <item>@drawable/olivia_small</item>
+        <item>@drawable/two</item>
+    </string-array>
+    <string-array name="imageIdArray">
+        <item>@drawable/blank</item>
+        <item>@drawable/cheese</item>
+        <item>@drawable/edcepp</item>
+        <item>@drawable/olivia10noise</item>
+        <item>@drawable/olivia25noise</item>
+        <item>@drawable/olivia50noise</item>
+        <item>@drawable/olivia_small</item>
+        <item>@drawable/two</item>
+    </string-array>
+</resources>
